@@ -56,6 +56,21 @@
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
 			</plugin>
+			<plugin>
+    				<groupId>org.owasp</groupId>
+    				<artifactId>dependency-check-maven</artifactId>
+    				<version>8.4.0</version> <!-- Use the latest version -->
+    				<executions>
+        				<execution>
+            					<goals>
+                					<goal>check</goal>
+            					</goals>
+					</execution>
+    				</executions>
+    				<configuration>
+        				<nvdApiKey>5b462d17-c552-4b2a-bece-fec041e49c2c</nvdApiKey>
+    				</configuration>
+			</plugin>
 		</plugins>
 		<finalName>devops-integration</finalName>
 	</build>
